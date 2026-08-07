@@ -29,7 +29,11 @@ function CopyEmail() {
       <Mail className="h-5 w-5 text-accent" />
       {profile.email}
       <span className="text-muted transition-colors group-hover:text-accent">
-        {copied ? <Check className="h-4 w-4 text-accent" /> : <Copy className="h-4 w-4" />}
+        {copied ? (
+          <Check className="h-4 w-4 text-accent" />
+        ) : (
+          <Copy className="h-4 w-4" />
+        )}
       </span>
       <span aria-live="polite" className="sr-only">
         {copied ? "Email address copied to clipboard" : ""}
@@ -51,12 +55,12 @@ export function Contact() {
             <span aria-hidden="true">{"// "}</span>contact
           </p>
           <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-foreground">
-            Let&apos;s build your next
-            <span className="text-gradient"> data platform</span>
+            Open to remote
+            <span className="text-gradient"> opportunities worldwide</span>
           </h2>
           <p className="mx-auto mt-5 max-w-xl text-base md:text-lg leading-relaxed text-muted">
-            Open to lead data engineering roles, platform modernization
-            initiatives, and consulting. Reach out — I usually reply within a day.
+            Available for frontend and full stack roles, SaaS product work, and
+            team-based delivery. Reach out by email or phone.
           </p>
         </Reveal>
 
@@ -70,24 +74,28 @@ export function Contact() {
               <Mail className="h-4 w-4" />
               Send an Email
             </a>
-            <a
-              href={profile.linkedin}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-full glass px-6 py-3 text-sm font-semibold text-foreground transition-all duration-200 hover:border-accent/40 hover:-translate-y-0.5 active:scale-[0.97]"
-            >
-              <LinkedinIcon className="h-4 w-4 text-accent" />
-              LinkedIn
-            </a>
-            <a
-              href={profile.github}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-full glass px-6 py-3 text-sm font-semibold text-foreground transition-all duration-200 hover:border-accent/40 hover:-translate-y-0.5 active:scale-[0.97]"
-            >
-              <GithubIcon className="h-4 w-4 text-accent" />
-              GitHub
-            </a>
+            {profile.linkedin ? (
+              <a
+                href={profile.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-full glass px-6 py-3 text-sm font-semibold text-foreground transition-all duration-200 hover:border-accent/40 hover:-translate-y-0.5 active:scale-[0.97]"
+              >
+                <LinkedinIcon className="h-4 w-4 text-accent" />
+                LinkedIn
+              </a>
+            ) : null}
+            {profile.github ? (
+              <a
+                href={profile.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-full glass px-6 py-3 text-sm font-semibold text-foreground transition-all duration-200 hover:border-accent/40 hover:-translate-y-0.5 active:scale-[0.97]"
+              >
+                <GithubIcon className="h-4 w-4 text-accent" />
+                GitHub
+              </a>
+            ) : null}
           </div>
         </Reveal>
 
@@ -108,7 +116,7 @@ export function Contact() {
       <footer className="relative mt-20 border-t border-border-subtle pt-8">
         <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-3 px-5 md:flex-row md:px-8">
           <p className="font-mono text-xs text-muted">
-            © {new Date().getFullYear()} Fahad Mustafa. All rights reserved.
+            © {new Date().getFullYear()} Haidar Ali. All rights reserved.
           </p>
           <p className="font-mono text-xs text-muted">
             Built with Next.js · Tailwind CSS · Framer Motion

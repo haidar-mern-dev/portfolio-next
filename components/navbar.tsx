@@ -10,14 +10,18 @@ const links = [
   { href: "#about", label: "About" },
   { href: "#skills", label: "Skills" },
   { href: "#experience", label: "Experience" },
-  { href: "#certifications", label: "Certifications" },
+  { href: "#projects", label: "Projects" },
+  { href: "#awards", label: "Awards" },
   { href: "#contact", label: "Contact" },
 ];
 
 function ThemeToggle() {
   const { resolvedTheme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
-  useEffect(() => setMounted(true), []);
+  useEffect(() => {
+    const id = requestAnimationFrame(() => setMounted(true));
+    return () => cancelAnimationFrame(id);
+  }, []);
 
   return (
     <button
@@ -44,7 +48,11 @@ export function Navbar() {
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState("");
   const { scrollYProgress } = useScroll();
-  const progress = useSpring(scrollYProgress, { stiffness: 120, damping: 30, mass: 0.4 });
+  const progress = useSpring(scrollYProgress, {
+    stiffness: 120,
+    damping: 30,
+    mass: 0.4,
+  });
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 12);
@@ -63,7 +71,7 @@ export function Navbar() {
           if (entry.isIntersecting) setActive(`#${entry.target.id}`);
         }
       },
-      { rootMargin: "-40% 0px -55% 0px" }
+      { rootMargin: "-40% 0px -55% 0px" },
     );
     sections.forEach((s) => observer.observe(s));
     return () => observer.disconnect();
@@ -73,7 +81,9 @@ export function Navbar() {
     <header
       className={cn(
         "fixed inset-x-0 top-0 z-50 transition-all duration-300",
-        scrolled ? "glass shadow-lg shadow-black/5" : "bg-transparent border-b border-transparent"
+        scrolled
+          ? "glass shadow-lg shadow-black/5"
+          : "bg-transparent border-b border-transparent",
       )}
     >
       {/* Scroll progress bar */}
@@ -94,7 +104,7 @@ export function Navbar() {
             <Terminal className="h-4 w-4" />
           </span>
           <span>
-            fahad<span className="text-accent">.data</span>
+            haidar<span className="text-accent">.dev</span>
           </span>
         </a>
 
@@ -107,7 +117,7 @@ export function Navbar() {
                   "relative rounded-full px-4 py-2 text-sm font-medium transition-colors duration-200",
                   active === link.href
                     ? "text-accent"
-                    : "text-muted hover:text-foreground"
+                    : "text-muted hover:text-foreground",
                 )}
               >
                 {active === link.href && (
@@ -140,7 +150,9 @@ export function Navbar() {
       {/* Mobile menu */}
       <motion.div
         initial={false}
-        animate={open ? { height: "auto", opacity: 1 } : { height: 0, opacity: 0 }}
+        animate={
+          open ? { height: "auto", opacity: 1 } : { height: 0, opacity: 0 }
+        }
         transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
         className="md:hidden overflow-hidden glass border-t-0"
       >
@@ -154,7 +166,7 @@ export function Navbar() {
                   "block rounded-xl px-4 py-3 text-base font-medium transition-colors",
                   active === link.href
                     ? "text-accent bg-accent-soft"
-                    : "text-muted hover:text-foreground hover:bg-accent-soft/50"
+                    : "text-muted hover:text-foreground hover:bg-accent-soft/50",
                 )}
               >
                 {link.label}

@@ -18,8 +18,6 @@ type Node = {
 export function Particles({ className }: { className?: string }) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const { resolvedTheme } = useTheme();
-  const themeRef = useRef(resolvedTheme);
-  themeRef.current = resolvedTheme;
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -27,7 +25,9 @@ export function Particles({ className }: { className?: string }) {
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
 
-    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const reduce = window.matchMedia(
+      "(prefers-reduced-motion: reduce)",
+    ).matches;
 
     let raf = 0;
     let nodes: Node[] = [];
@@ -55,7 +55,7 @@ export function Particles({ className }: { className?: string }) {
     };
 
     const colors = () => {
-      const dark = themeRef.current !== "light";
+      const dark = resolvedTheme !== "light";
       return dark
         ? { dot: "rgba(52, 211, 153, 0.55)", line: "52, 211, 153" }
         : { dot: "rgba(5, 150, 105, 0.45)", line: "5, 150, 105" };
@@ -115,7 +115,7 @@ export function Particles({ className }: { className?: string }) {
       cancelAnimationFrame(raf);
       window.removeEventListener("resize", onResize);
     };
-  }, []);
+  }, [resolvedTheme]);
 
   return (
     <canvas

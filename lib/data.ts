@@ -1,20 +1,29 @@
 export const profile = {
-  name: "Fahad Mustafa",
-  titles: ["Lead Data Engineer", "Big Data Engineer", "Cloud Data Specialist"],
-  location: "Lumberton, NJ 08048",
-  email: "fahadmustafa8000@gmail.com",
-  phone: "(856) 208-0827",
-  linkedin: "https://linkedin.com/in/fahad-mustafa-fm747",
-  github: "https://github.com/fahadmustafa-data",
+  name: "Haidar Ali",
+  headline:
+    "Senior Software Engineer | Full Stack (MERN) | React.js | Next.js | Node.js | TypeScript",
+  titles: [
+    "Senior Software Engineer",
+    "Full Stack (MERN)",
+    "React.js",
+    "Next.js",
+    "Node.js",
+    "TypeScript",
+  ],
+  location: "Lahore, Pakistan",
+  email: "haidar.ali.reactdev@gmail.com",
+  phone: "+92 335 4512505",
+  linkedin: "https://www.linkedin.com/in/haidar-ali-dev/",
+  github: "https://github.com/haidar-mern-dev/",
   summary:
-    "Lead Data Engineer with 8+ years of experience designing, developing, and modernizing enterprise data platforms across AWS, Azure, and GCP. Expertise in building scalable ETL/ELT pipelines, cloud-native data warehouses, and real-time data processing solutions using Python, SQL, Apache Spark, Kafka, Airflow, Databricks, Snowflake, and dbt. Strong background in cloud migration, data modeling, CI/CD, Infrastructure as Code, and mentoring engineering teams.",
+    "Results-driven Senior Full Stack Software Engineer with 5+ years of experience designing, developing, and maintaining scalable web applications, SaaS platforms, and enterprise software solutions using the MERN Stack. Extensive expertise in React.js, Next.js, Node.js, Express.js, TypeScript, JavaScript, MongoDB, PostgreSQL, REST APIs, GraphQL, Redux Toolkit, AWS, Docker, Kubernetes, and CI/CD. Experienced in building high-performance frontend applications, designing secure backend services, integrating third-party APIs, optimizing application performance, and collaborating with cross-functional Agile teams. Passionate about writing clean, maintainable code and delivering scalable cloud-ready applications for global users.",
 };
 
 export const stats = [
-  { value: "8+", label: "Years of Experience" },
-  { value: "3", label: "Cloud Platforms" },
-  { value: "4", label: "Certifications" },
-  { value: "50+", label: "Pipelines Shipped" },
+  { value: "5+", label: "Years of Experience" },
+  { value: "4", label: "Roles" },
+  { value: "5", label: "Featured Projects" },
+  { value: "2", label: "Awards" },
 ];
 
 export type SkillCategory = {
@@ -25,74 +34,92 @@ export type SkillCategory = {
 
 export const skillCategories: SkillCategory[] = [
   {
-    title: "Programming",
+    title: "Frontend",
     icon: "code",
-    skills: ["Python", "SQL (T-SQL, PL/SQL)", "Scala", "Java", "Bash", "YAML", "JSON"],
+    skills: [
+      "React.js",
+      "Next.js",
+      "JavaScript (ES6+)",
+      "TypeScript",
+      "Redux",
+      "Redux Toolkit",
+      "Context API",
+      "HTML5",
+      "CSS3",
+      "Tailwind CSS",
+      "Material UI",
+      "Ant Design",
+      "Bootstrap",
+      "Shadcn UI",
+      "Framer Motion",
+    ],
   },
   {
-    title: "Data Engineering",
+    title: "Backend",
     icon: "workflow",
-    skills: ["ETL/ELT", "Apache Spark", "PySpark", "Kafka", "Spark Streaming", "Airflow", "Dagster", "dbt", "Databricks", "Snowpark"],
+    skills: [
+      "Node.js",
+      "Express.js",
+      "NestJS",
+      "REST APIs",
+      "GraphQL",
+      "JWT Authentication",
+      "RBAC",
+      "WebSockets",
+    ],
   },
   {
-    title: "Cloud Platforms",
+    title: "Database",
     icon: "cloud",
-    skills: ["AWS", "Azure", "GCP"],
+    skills: ["MongoDB", "PostgreSQL", "Prisma ORM", "Firebase", "Redis"],
   },
   {
-    title: "Cloud Services",
+    title: "Cloud & DevOps",
     icon: "server",
-    skills: ["Azure Data Factory", "Microsoft Fabric", "Synapse Analytics", "S3", "EC2", "Lambda", "BigQuery"],
+    skills: [
+      "AWS",
+      "Docker",
+      "Kubernetes",
+      "Git",
+      "GitHub",
+      "GitHub Actions",
+      "CI/CD",
+      "Linux",
+    ],
   },
   {
-    title: "Databases & Warehouses",
-    icon: "database",
-    skills: ["SQL Server", "PostgreSQL", "Oracle", "MySQL", "Redshift", "Snowflake", "BigQuery", "Apache Iceberg", "Delta Lake"],
-  },
-  {
-    title: "Big Data",
-    icon: "layers",
-    skills: ["Hadoop", "Spark Streaming", "Apache Flink", "Iceberg", "Delta Lake"],
-  },
-  {
-    title: "Data Modeling",
-    icon: "boxes",
-    skills: ["Dimensional Modeling", "Star Schema", "Snowflake Schema", "Data Vault 2.0", "Data Marts"],
-  },
-  {
-    title: "Data Governance",
-    icon: "shield-check",
-    skills: ["Collibra", "Unity Catalog", "Great Expectations", "Data Lineage", "MDM"],
-  },
-  {
-    title: "ML & AI",
-    icon: "brain",
-    skills: ["MLflow", "Azure ML", "SageMaker", "Vertex AI", "LangChain", "RAG", "Feature Engineering"],
-  },
-  {
-    title: "BI Tools",
-    icon: "bar-chart",
-    skills: ["Power BI", "Tableau", "Looker", "Amazon QuickSight"],
-  },
-  {
-    title: "DevOps & IaC",
-    icon: "git-branch",
-    skills: ["Git", "GitHub Actions", "Jenkins", "Docker", "Kubernetes", "Terraform", "CI/CD"],
-  },
-  {
-    title: "APIs",
+    title: "Tools",
     icon: "plug",
-    skills: ["REST", "GraphQL", "gRPC"],
+    skills: ["VS Code", "Postman", "Jira", "Figma", "npm", "Yarn"],
   },
   {
-    title: "Security & Compliance",
-    icon: "lock",
-    skills: ["IAM", "HIPAA", "GDPR", "SOC 2", "RBAC"],
+    title: "Architecture",
+    icon: "boxes",
+    skills: [
+      "Responsive Web Design",
+      "Performance Optimization",
+      "Authentication & Authorization",
+      "System Integration",
+    ],
   },
   {
-    title: "Monitoring",
-    icon: "activity",
-    skills: ["Grafana", "Prometheus", "Datadog", "ELK Stack"],
+    title: "Collaboration",
+    icon: "users",
+    skills: [
+      "Agile Scrum",
+      "Code Review",
+      "Problem Solving",
+      "Team Collaboration",
+    ],
+  },
+  {
+    title: "API Development",
+    icon: "plug",
+    skills: [
+      "REST API Development",
+      "GraphQL APIs",
+      "Third-party Integrations",
+    ],
   },
 ];
 
@@ -107,96 +134,229 @@ export type Experience = {
 
 export const experiences: Experience[] = [
   {
-    role: "Lead Data Engineer",
-    company: "Kpak",
-    period: "Mar 2024 — Present",
+    role: "Senior Frontend Developer",
+    company: "Programmers Planet",
+    period: "Dec 2025 — Present",
     current: true,
     bullets: [
-      "Led enterprise cloud-native data platforms on Databricks, Snowflake, and Spark, serving analytics and AI workloads at scale.",
-      "Built reusable ingestion frameworks and real-time pipelines with Kafka, Spark Streaming, Airflow, and dbt.",
-      "Migrated legacy systems to Lakehouse architectures across AWS, Azure, and GCP.",
-      "Established data governance with Collibra, Unity Catalog, and Great Expectations.",
-      "Enabled ML platforms with MLflow, Vertex AI, and SageMaker; automated infrastructure with Terraform, Kubernetes, and GitHub Actions.",
-      "Mentored distributed engineering teams and standardized platform practices.",
+      "Design and develop scalable enterprise-grade frontend applications using React.js, Next.js, and TypeScript.",
+      "Build reusable, modular, and maintainable UI components following modern software engineering practices.",
+      "Collaborate closely with backend engineers to integrate RESTful APIs and GraphQL services.",
+      "Implement responsive interfaces ensuring seamless user experience across desktop, tablet, and mobile devices.",
+      "Optimize application performance through lazy loading, code splitting, memoization, and efficient state management.",
+      "Improve application accessibility following WCAG standards.",
+      "Participate in Agile Scrum ceremonies including sprint planning, standups, retrospectives, and code reviews.",
+      "Work closely with UI/UX designers to translate Figma designs into pixel-perfect interfaces.",
+      "Maintain high-quality code using Git workflows and peer code reviews.",
+      "Troubleshoot production issues and implement long-term scalable solutions.",
     ],
-    tech: ["Databricks", "Snowflake", "Kafka", "Airflow", "dbt", "Terraform", "Kubernetes", "MLflow"],
+    tech: [
+      "React.js",
+      "Next.js",
+      "TypeScript",
+      "Redux Toolkit",
+      "REST APIs",
+      "GraphQL",
+      "Tailwind CSS",
+      "Material UI",
+      "Git",
+      "Agile",
+    ],
   },
   {
-    role: "Senior Data Engineer",
-    company: "Neo4j",
-    period: "Nov 2021 — Feb 2024",
+    role: "MERN Stack Developer",
+    company: "TxLabz",
+    period: "May 2023 — Nov 2025",
     bullets: [
-      "Built cloud-native ETL/ELT pipelines with Databricks, Snowflake, Spark, and dbt.",
-      "Designed reusable ingestion frameworks and optimized Spark workloads for cost and performance.",
-      "Designed dimensional models and data marts powering enterprise reporting.",
-      "Integrated multi-cloud and API data sources into unified analytics layers.",
-      "Automated CI/CD with Jenkins and Docker; mentored junior engineers.",
+      "Developed scalable SaaS products using MERN Stack technologies.",
+      "Designed secure REST APIs using Node.js and Express.js.",
+      "Built reusable React components improving application maintainability.",
+      "Integrated Stripe payment gateway for secure online transactions.",
+      "Developed role-based authentication using JWT.",
+      "Integrated Firebase Authentication and Firestore.",
+      "Implemented Twilio Video APIs.",
+      "Configured SendGrid email services.",
+      "Optimized MongoDB queries for improved backend performance.",
+      "Collaborated with cross-functional development teams in Agile environments.",
+      "Participated in production deployments and bug fixing.",
+      "Improved application scalability through modular architecture.",
     ],
-    tech: ["Databricks", "Snowflake", "Spark", "dbt", "Jenkins", "Docker"],
+    tech: [
+      "React.js",
+      "Next.js",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Firebase",
+      "Stripe",
+      "Twilio",
+      "SendGrid",
+      "TypeScript",
+    ],
   },
   {
-    role: "Data Engineer",
-    company: "Curotec",
-    period: "Jun 2019 — Oct 2021",
+    role: "Software Engineer",
+    company: "Arain X Ltd",
+    period: "Feb 2022 — Apr 2023",
     bullets: [
-      "Built ETL/ELT pipelines with Python, Spark, and Airflow for batch and incremental loads.",
-      "Optimized SQL and Spark performance across Redshift and Snowflake warehouses.",
-      "Automated data validation with Python, improving data reliability.",
-      "Supported AWS batch processing with S3, EC2, and Lambda.",
+      "Developed responsive React.js applications.",
+      "Built reusable UI components.",
+      "Integrated REST APIs.",
+      "Optimized application loading performance.",
+      "Used Redux Toolkit for application state management.",
+      "Improved frontend maintainability through modular architecture.",
+      "Worked closely with QA and backend teams.",
     ],
-    tech: ["Python", "Spark", "Airflow", "Redshift", "Snowflake", "AWS"],
+    tech: ["React.js", "Redux Toolkit", "REST APIs", "Modular Architecture"],
+  },
+  {
+    role: "Frontend Developer",
+    company: "RbSol",
+    period: "Nov 2021 — May 2022",
+    bullets: [
+      "Developed responsive user interfaces.",
+      "Built reusable React components.",
+      "Integrated APIs.",
+      "Fixed UI bugs.",
+      "Improved website performance.",
+      "Participated in Agile software development lifecycle.",
+    ],
+    tech: ["React.js", "Responsive UI", "API Integration", "Agile"],
   },
 ];
 
-export type Certification = {
+export type Project = {
   title: string;
-  issuer: string;
-  color: string;
+  description: string;
+  link: string;
+  highlights: string[];
 };
 
-export const certifications: Certification[] = [
+export const projects: Project[] = [
   {
-    title: "Databricks Certified Data Engineer Professional",
-    issuer: "Databricks",
-    color: "#FF3621",
+    title: "WheelEasy",
+    description:
+      "Accessibility mapping platform helping wheelchair users discover accessible locations across Australia.",
+    link: "https://wheeleasy.org",
+    highlights: [
+      "Next.js frontend",
+      "Google Places API",
+      "Algolia search",
+      "MinIO storage",
+      "SEO-friendly SSR",
+      "Role-based moderation dashboards",
+    ],
   },
   {
-    title: "Azure Data Engineer Associate (DP-203)",
-    issuer: "Microsoft Certified",
-    color: "#0078D4",
+    title: "LimeLeads",
+    description: "B2B lead generation platform.",
+    link: "https://app.limeleads.com/",
+    highlights: [
+      "React frontend",
+      "Node.js backend APIs",
+      "Redis caching",
+      "CRM integrations",
+      "Optimized data delivery performance",
+    ],
   },
   {
-    title: "AWS Certified Data Analytics — Specialty",
-    issuer: "Amazon Web Services",
-    color: "#FF9900",
+    title: "e-English",
+    description:
+      "Online learning platform with teacher and student dashboards.",
+    link: "https://dev.e-english.com.au/",
+    highlights: [
+      "Stripe payments",
+      "Twilio Video",
+      "Firebase Authentication",
+      "SendGrid notifications",
+    ],
   },
   {
-    title: "SnowPro Core Certification",
-    issuer: "Snowflake",
-    color: "#29B5E8",
+    title: "Swoodle",
+    description: "Fundraising marketplace for merchants.",
+    link: "https://dev.panel.swoodle.com.au/",
+    highlights: [
+      "Merchant dashboards",
+      "REST APIs",
+      "Responsive interfaces",
+      "Role-based authentication",
+    ],
+  },
+  {
+    title: "PAAQ",
+    description: "Verified expert platform with appointment booking.",
+    link: "https://www.paaq.app/",
+    highlights: [
+      "Stripe payments",
+      "Secure Node.js APIs",
+      "Responsive React frontend",
+    ],
+  },
+  {
+    title: "RapidoGate",
+    description:
+      "Online gate management system for secure access control and monitoring.",
+    link: "https://rapidogate.com/",
+    highlights: [
+      "React frontend",
+      "Node.js backend",
+      "Access control",
+      "Monitoring",
+    ],
+  },
+  {
+    title: "Texi Car Rent",
+    description: "Car rental platform with booking and payment features.",
+    link: "https://texi-car-rent.netlify.app/home",
+    highlights: [
+      "React frontend",
+      "Node.js backend",
+      "MongoDB",
+      "Booking flows",
+    ],
+  },
+  {
+    title: "Ivy Beds & Blinds",
+    description:
+      "E-commerce platform for beds and blinds with product catalog and checkout.",
+    link: "https://ivy-beds-blinds.netlify.app/",
+    highlights: ["React frontend", "Node.js backend", "MongoDB", "Checkout"],
+  },
+  {
+    title: "Crockery App",
+    description:
+      "Online platform for crockery products with shopping cart and payment integration.",
+    link: "https://crockery-app.netlify.app/",
+    highlights: ["React frontend", "Node.js backend", "MongoDB", "Payments"],
+  },
+  {
+    title: "Restaurant",
+    description: "Online restaurant platform with menu and ordering system.",
+    link: "https://resturant12.netlify.app/",
+    highlights: ["React frontend", "Node.js backend", "MongoDB", "Ordering"],
   },
 ];
 
-export const achievements = [
+export type Award = {
+  title: string;
+  issuer: string;
+  note: string;
+};
+
+export const awards: Award[] = [
   {
-    title: "Platform Modernization",
-    text: "Modernized enterprise data platforms with cloud-native architectures, replacing brittle legacy systems with Lakehouse designs built to scale.",
+    title: "Employee of the Month",
+    issuer: "Arain X",
+    note: "Recognized for consistent delivery and collaboration.",
   },
   {
-    title: "Batch + Real-Time at Scale",
-    text: "Delivered scalable batch and real-time integration solutions powering analytics, reporting, and operational workloads across the business.",
-  },
-  {
-    title: "Engineering Standards",
-    text: "Standardized engineering practices with reusable frameworks, automated validation, and governance baked into every pipeline.",
-  },
-  {
-    title: "Multi-Cloud Leadership",
-    text: "Led multi-cloud modernization initiatives across AWS, Azure, and GCP, supporting enterprise analytics and AI adoption.",
+    title: "Rising Star Award",
+    issuer: "TxLabz",
+    note: "Recognized for growth, impact, and contribution to product delivery.",
   },
 ];
 
 export const education = {
-  degree: "Bachelor of Business Administration",
-  school: "Temple University",
+  degree: "Bachelor of Science in Computer Science",
+  school: "University of Sargodha · 2017 — 2021",
 };

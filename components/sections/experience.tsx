@@ -19,8 +19,8 @@ export function Experience() {
       <div className="mx-auto max-w-6xl px-5 md:px-8">
         <SectionHeading
           eyebrow="experience"
-          title="Where I've built"
-          description="Eight years of shipping data platforms — from hands-on pipeline engineering to leading enterprise modernization."
+          title="Professional Experience"
+          description="Hands-on frontend and full stack delivery across startups and product teams."
         />
 
         <div ref={lineRef} className="relative">
@@ -51,7 +51,9 @@ export function Experience() {
                       <h3 className="text-lg md:text-xl font-bold text-foreground">
                         {exp.role}
                       </h3>
-                      <span className="font-mono text-sm text-accent">@ {exp.company}</span>
+                      <span className="font-mono text-sm text-accent">
+                        @ {exp.company}
+                      </span>
                       <span
                         className={
                           "ml-auto rounded-full px-3 py-1 font-mono text-xs " +
@@ -66,7 +68,10 @@ export function Experience() {
 
                     <ul className="space-y-2.5">
                       {exp.bullets.map((b) => (
-                        <li key={b} className="flex gap-2.5 text-sm md:text-[15px] leading-relaxed text-muted">
+                        <li
+                          key={b}
+                          className="flex gap-2.5 text-sm md:text-[15px] leading-relaxed text-muted"
+                        >
                           <ChevronRight className="mt-1 h-3.5 w-3.5 shrink-0 text-accent" />
                           <span>{b}</span>
                         </li>

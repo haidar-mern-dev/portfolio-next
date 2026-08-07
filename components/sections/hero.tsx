@@ -81,29 +81,27 @@ export function Hero() {
           {...enter(0.15)}
           className="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-foreground"
         >
-          Fahad Mustafa
+          {profile.name}
         </motion.h1>
 
         <motion.p
           {...enter(0.25)}
           className="mt-4 text-2xl sm:text-4xl lg:text-5xl font-semibold tracking-tight text-muted"
         >
-          <RotatingTitle />
+          {profile.headline}
         </motion.p>
 
         <motion.p
           {...enter(0.35)}
           className="mt-6 max-w-2xl text-base md:text-lg leading-relaxed text-muted"
         >
-          I design and modernize enterprise data platforms across{" "}
-          <span className="text-foreground font-medium">AWS</span>,{" "}
-          <span className="text-foreground font-medium">Azure</span>, and{" "}
-          <span className="text-foreground font-medium">GCP</span> — scalable
-          pipelines, cloud-native warehouses, and real-time processing with
-          Spark, Kafka, Databricks, Snowflake, and dbt.
+          {profile.summary}
         </motion.p>
 
-        <motion.div {...enter(0.45)} className="mt-9 flex flex-wrap items-center gap-4">
+        <motion.div
+          {...enter(0.45)}
+          className="mt-9 flex flex-wrap items-center gap-4"
+        >
           <a
             href="#experience"
             className="group inline-flex items-center gap-2 rounded-full bg-accent px-6 py-3 text-sm md:text-base font-semibold text-[#0b1120] shadow-lg shadow-accent/25 transition-all duration-200 hover:shadow-accent/40 hover:-translate-y-0.5 active:scale-[0.97]"
@@ -118,29 +116,38 @@ export function Hero() {
             <Mail className="h-4 w-4 text-accent" />
             Get in Touch
           </a>
-          <div className="flex items-center gap-2">
-            <a
-              href={profile.github}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="GitHub profile"
-              className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-border-subtle text-muted transition-all duration-200 hover:text-accent hover:border-accent/40 hover:-translate-y-0.5"
-            >
-              <GithubIcon className="h-5 w-5" />
-            </a>
-            <a
-              href={profile.linkedin}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="LinkedIn profile"
-              className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-border-subtle text-muted transition-all duration-200 hover:text-accent hover:border-accent/40 hover:-translate-y-0.5"
-            >
-              <LinkedinIcon className="h-5 w-5" />
-            </a>
-          </div>
+          {(profile.github || profile.linkedin) && (
+            <div className="flex items-center gap-2">
+              {profile.github ? (
+                <a
+                  href={profile.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="GitHub profile"
+                  className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-border-subtle text-muted transition-all duration-200 hover:text-accent hover:border-accent/40 hover:-translate-y-0.5"
+                >
+                  <GithubIcon className="h-5 w-5" />
+                </a>
+              ) : null}
+              {profile.linkedin ? (
+                <a
+                  href={profile.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="LinkedIn profile"
+                  className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-border-subtle text-muted transition-all duration-200 hover:text-accent hover:border-accent/40 hover:-translate-y-0.5"
+                >
+                  <LinkedinIcon className="h-5 w-5" />
+                </a>
+              ) : null}
+            </div>
+          )}
         </motion.div>
 
-        <motion.p {...enter(0.5)} className="mt-6 flex items-center gap-2 font-mono text-sm text-muted">
+        <motion.p
+          {...enter(0.5)}
+          className="mt-6 flex items-center gap-2 font-mono text-sm text-muted"
+        >
           <MapPin className="h-4 w-4 text-accent" />
           {profile.location}
         </motion.p>
@@ -155,7 +162,9 @@ export function Hero() {
               key={s.label}
               className="card-glow rounded-2xl glass px-5 py-4"
             >
-              <dt className="order-2 text-xs md:text-sm text-muted">{s.label}</dt>
+              <dt className="order-2 text-xs md:text-sm text-muted">
+                {s.label}
+              </dt>
               <dd className="order-1 font-mono text-2xl md:text-3xl font-bold text-accent">
                 {s.value}
               </dd>

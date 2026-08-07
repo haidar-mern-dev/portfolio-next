@@ -48,11 +48,14 @@ export function Skills() {
       <div className="relative mx-auto max-w-6xl px-5 md:px-8">
         <SectionHeading
           eyebrow="skills"
-          title="A full-stack data toolkit"
-          description="From ingestion to insight — the languages, platforms, and frameworks I use to build production data systems."
+          title="Core Competencies"
+          description="The frontend, backend, database, cloud, and collaboration tools that support my MERN stack work."
         />
 
-        <StaggerGroup className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3" stagger={0.05}>
+        <StaggerGroup
+          className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3"
+          stagger={0.05}
+        >
           {skillCategories.map((cat) => {
             const Icon = icons[cat.icon] ?? Code2;
             return (
@@ -62,7 +65,9 @@ export function Skills() {
                     <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-accent-soft text-accent transition-transform duration-300 group-hover:scale-110 group-hover:rotate-[-6deg]">
                       <Icon className="h-5 w-5" />
                     </span>
-                    <h3 className="font-semibold text-foreground">{cat.title}</h3>
+                    <h3 className="font-semibold text-foreground">
+                      {cat.title}
+                    </h3>
                   </div>
                   <ul className="flex flex-wrap gap-2">
                     {cat.skills.map((skill) => (

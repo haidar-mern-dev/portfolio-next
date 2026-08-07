@@ -16,22 +16,26 @@ const jetbrains = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Fahad Mustafa — Lead Data Engineer",
+  title: "Haidar Ali — Senior Software Engineer",
   description:
-    "Lead Data Engineer with 8+ years of experience building enterprise data platforms across AWS, Azure, and GCP. Spark, Kafka, Airflow, Databricks, Snowflake, dbt.",
+    "Senior Full Stack Software Engineer specializing in React.js, Next.js, Node.js, TypeScript, and MERN stack development.",
+  icons: {
+    icon: "/p.png",
+    apple: "/p.png",
+  },
   keywords: [
-    "Data Engineer",
-    "Big Data",
-    "Cloud",
-    "Databricks",
-    "Snowflake",
-    "Spark",
-    "Kafka",
+    "Senior Software Engineer",
+    "Full Stack Developer",
+    "React.js",
+    "Next.js",
+    "Node.js",
+    "TypeScript",
+    "MERN Stack",
   ],
   openGraph: {
-    title: "Fahad Mustafa — Lead Data Engineer",
+    title: "Haidar Ali — Senior Software Engineer",
     description:
-      "Building scalable, cloud-native data platforms across AWS, Azure, and GCP.",
+      "Building scalable frontend and full stack applications with React.js, Next.js, Node.js, and TypeScript.",
     type: "website",
   },
 };
@@ -44,7 +48,11 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${inter.variable} ${jetbrains.variable} antialiased`}>
-        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false}>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+          enableSystem={false}
+        >
           {children}
         </ThemeProvider>
       </body>
